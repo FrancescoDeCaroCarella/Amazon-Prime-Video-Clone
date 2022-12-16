@@ -1,5 +1,8 @@
 **Nome progetto**: Pop Prime Movie
+
 **Periodo svolgimento**: 12/12/2022 - 16/12/2022
+
+**Mittente**: Edgemony Palermo, in seno alla CodeWeek Project 2022
 
 **Professionista**: De Caro Carella Francesco
 
