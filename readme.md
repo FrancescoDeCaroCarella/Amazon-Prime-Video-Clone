@@ -23,6 +23,7 @@
 - [x] Stampare **_il vote average per ogni movie_** attraverso la stampa di “n” stelle (Esempio: https://codepen.io/FredGenkin/pen/eaXYGV).
 
 **Extra features by Fdcc**
+- [ ] Sistemare responsive post add hero-image.
 - [x] Ripulire codice CSS + JS.
 - [x] Creare modale con info aggiungtive al passagio del mouse sulle card.
 - [ ] Perfezionare somiglianza col servizio Prime Video.
