@@ -3,7 +3,7 @@ const qS = (el) => document.querySelector(el);
 const URL_DB = [
   {
     //MOST POPULAR
-    // URL_MOST_POPULAR:"https://api.themoviedb.org/3/discover/movie?api_key=741f255e2fca99e2b2552acba109f99e&language=it-IT&region=IT&sort_by=popularity.desc",
+    URL_MOST_POPULAR:"https://api.themoviedb.org/3/discover/movie?api_key=741f255e2fca99e2b2552acba109f99e&language=it-IT&region=IT&sort_by=popularity.desc",
   },
   {
     //TOP RATED
@@ -56,21 +56,49 @@ buttonLeft.onclick = function () {
   containter.scrollLeft -= containerWidth;
 };
 
-//HERO SCROLL 
-const heroImage = document.getElementById("hero-last-movies");
 
-function scrollFunction() {
+//HERO SCROLL 
+let mediaQuery  = window.matchMedia("(min-width: 90em)")
+const heroImage = document.getElementById("hero-container");
+
+if (mediaQuery.matches) {
+  window.onscroll = function () {
+  scrollFunction();
+};
+  function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     heroImage.style.height = "80px";
-    heroImage.style.transitionDuration = "1s";
+    heroImage.style.transitionDuration = "1.5s";
   } else {
     heroImage.style.height = "100vh";
   }
 }
-
-window.onscroll = function () {
+} else {
+    window.onscroll = function () {
   scrollFunction();
 };
+  function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    heroImage.style.height = "300px";
+    heroImage.style.transitionDuration = "1.5s";
+  } else {
+    heroImage.style.height = "80vh";
+  }
+}
+}
 
+//MENU ACTIVE ITEM
+let navlist = document.querySelectorAll('.nav-link');
+for (let i = 0; i < navlist.length; i++) {
+	navlist[i].addEventListener('click', function() {
+		for (let x = 0; x < navlist.length; x++) {
+			if (navlist[x] == this) {
+				navlist[x].classList.add('active');
+			} else {
+				navlist[x].classList.remove('active');
+			}
+		}
+	});
+}
 
 export { cE, qS, URL_DB, IMG_URL, IMG_URL_HERO, cDL };

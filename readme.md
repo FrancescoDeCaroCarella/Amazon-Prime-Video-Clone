@@ -22,13 +22,26 @@
 - [x] Creare per ogni card “Movie” **_una modal_** con i dettagli del film che si apre al click sulla card stessa.
 - [x] Stampare **_il vote average per ogni movie_** attraverso la stampa di “n” stelle (Esempio: https://codepen.io/FredGenkin/pen/eaXYGV).
 
-**Extra features by Fdcc**
-- [ ] Sistemare responsive post add hero-image.
+**Considerazioni importanti**: bisogna trovare una strategia per capire quali sono i film più popolari sfruttando le API che abbiamo a disposizione. Ci sarà sicuramente qualche proprietà nell’oggetto movie che ci può far comprendere che un film è popolare oppure no. O ancora potrebbe esistere un qualche endpoint che le API di MovieDB ci mettono a disposizione.
+
+**Extra features by Fdcc**: a valutazione dell'elaborato conseguita, è stato possibile pianificare e lavorare su ulteriori upgrade del progetto. A seguire il changelog con l'avanzamento dei lavori, ad oggi ancora in corso d'opera.
+
+**V1.0_Data:16/12/22**
 - [x] Ripulire codice CSS + JS.
+- [x] Creare hero film del momento.
 - [x] Creare modale con info aggiungtive al passagio del mouse sulle card.
+
+**V1.1_Data:19/12/22**
+- [x] Inserire variazione menu con layout grafico differente desktop/mobile (CSS).
+- [x] Inserire funzione pagina attiva nell'header menu (HTML/CSS/JS).
+- [X] Regolare effetto sezione hero allo scroll del mouse tra desktop e mobile (CSS/JS).
+- [x] Regolare responsive della sezione hero (CSS).
+- [x] Regolare responsive della categoria/gallery movie (CSS).
+
+**WORK IN PROGRESS**
+- [ ] Regolare funzionalità frecce scorrimento delle categoria/gallery movie.
+- [ ] Regolare modale info aggiuntive film
+- [ ] Creare slideshow per la sezione hero.
 - [ ] Perfezionare somiglianza col servizio Prime Video.
 - [ ] Creare una search bar.
-- [x] Creare hero film del momento.
 - [ ] Creare funzione salvataggio Preferiti.
-
-**Considerazioni importanti**: bisogna trovare una strategia per capire quali sono i film più popolari sfruttando le API che abbiamo a disposizione. Ci sarà sicuramente qualche proprietà nell’oggetto movie che ci può far comprendere che un film è popolare oppure no. O ancora potrebbe esistere un qualche endpoint che le API di MovieDB ci mettono a disposizione.

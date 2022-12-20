@@ -13,7 +13,7 @@ const getMovieCard = (res, parent) => {
 
   cardEl.className = "movie_card";
   imgEl.className = "movie_img";
-  voteEl.className = "stars";
+  voteEl.className = "movie_stars";
   infoContainerEl.className = "movie_card_info";
   titleEl.className = "modal_title";
   dateEl.className = "modal_date";
@@ -50,8 +50,8 @@ const getTopRatedMovieCard = (res, parent) => {
   const imgEl = cE("img");
   
   cardEl.className = "top_rated_movie_card";
-  voteEl.className = "movie_vote";
-  imgEl.className = "movie_img";
+  voteEl.className = "top_rated_movie_vote";
+  imgEl.className = "top_rated_movie_img";
 
   imgEl.setAttribute("src", `${IMG_URL}${res.poster_path}`);
   imgEl.setAttribute("alt", "image");
@@ -61,8 +61,9 @@ const getTopRatedMovieCard = (res, parent) => {
   parent.append(cardEl);
 };
 
-const getMostPopularMovieCard = (res, parent) => {
-  const cardEl = cE("div");
+const getHeroMovieCard = (res, parent) => {
+  for (let i = 0; i < 1; i++) {
+  const galleryEl = cE("div");
   const imgEl = cE("img");
 
   imgEl.className = "movie_img_hero";
@@ -70,8 +71,9 @@ const getMostPopularMovieCard = (res, parent) => {
   imgEl.setAttribute("src", `${IMG_URL_HERO}${res.backdrop_path}`);
   imgEl.setAttribute("alt", "image");
 
-  cardEl.append(imgEl);
-  parent.append(cardEl);
+  galleryEl.append(imgEl);
+  parent.append(galleryEl);
+};
 };
 
-export { getMovieCard, getTopRatedMovieCard, getMostPopularMovieCard };
+export { getMovieCard, getTopRatedMovieCard, getHeroMovieCard };

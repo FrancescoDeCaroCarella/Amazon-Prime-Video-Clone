@@ -1,5 +1,5 @@
 import { cE, qS, URL_DB, cDL } from "./utils.js";
-import { getMovieCard, getTopRatedMovieCard, getMostPopularMovieCard } from "./moviecard.js";
+import { getMovieCard, getTopRatedMovieCard, getHeroMovieCard } from "./moviecard.js";
 
 let movies = [];
 const urlMostPopular = URL_DB[0].URL_MOST_POPULAR;
@@ -7,7 +7,7 @@ const urlTopRated = URL_DB[1].URL_TOP_RATED;
 const urlComedy = URL_DB[2].URL_COMEDY;
 const urlThriller = URL_DB[3].URL_THRILLER;
 const urlHorror = URL_DB[4].URL_HORROR;
-const mostPopularContainer = qS(".most-popular-container");
+const heroContainer = qS(".hero-container");
 const topRatedContainer = qS(".top-rated-container");
 const comedyContainer = qS(".comedy-container");
 const thrillerContainer = qS(".thriller-container");
@@ -18,7 +18,7 @@ fetch(urlMostPopular)
   .then((data) => {
     movies = data.results;
     movies.map((res) => {
-      getMostPopularMovieCard(res, mostPopularContainer);
+      getHeroMovieCard(res, heroContainer);
     });
   });
 
