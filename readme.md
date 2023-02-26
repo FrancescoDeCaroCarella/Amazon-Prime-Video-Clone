@@ -1,4 +1,4 @@
-**Nome progetto**: Pop Prime Movie
+**Nome progetto**: Amazon Prime Video Clone
 
 **Periodo svolgimento**: 12/12/2022 - 16/12/2022
 
